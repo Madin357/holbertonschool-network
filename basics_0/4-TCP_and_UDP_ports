@@ -2,7 +2,20 @@
 # Script that displays listening TCP and UDP ports with PID/Program name
 
 echo "Active Internet connections (only servers)"
-netstat -tulpn
+cat /proc/net/tcp /proc/net/tcp6 | awk '
+NR>1 {
+    split($2,a,":")
+    port = strtonum("0x" a[2])
+    print "tcp *:"port
+}'
+
+cat /proc/net/udp /proc/net/udp6 | awk '
+NR>1 {
+    split($2,a,":")
+    port = strtonum("0x" a[2])
+    print "udp *:"port
+}'
 
 echo "Active UNIX domain sockets (only servers)"
-netstat -lxp
+cat /proc/net/unix
+
