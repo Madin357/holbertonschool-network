@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # 0-change_your_home_IP
 # This script updates /etc/hosts to change localhost and facebook.com IPs
 
