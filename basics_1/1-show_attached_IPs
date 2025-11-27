@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# 1-show_attached_IPs
+# This script displays all active IPv4 addresses on the machine
+
+# List all IPv4 addresses and print each on a new line
+ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
+
