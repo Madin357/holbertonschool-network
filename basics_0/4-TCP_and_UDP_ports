@@ -5,5 +5,4 @@ echo "Active Internet connections (only servers)"
 netstat -tulpn
 
 echo "Active UNIX domain sockets (only servers)"
-netstat -lp | grep unix
-
+netstat -lxp
