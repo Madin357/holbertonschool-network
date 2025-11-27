@@ -1,22 +1,17 @@
 #!/usr/bin/env bash
 # 0-change_your_home_IP
-# Change localhost and facebook.com IPs
+# This script updates /etc/hosts to change localhost and facebook.com IPs
 
-# Backup original hosts file
+# Backup the original hosts file
 cp /etc/hosts /etc/hosts.bak
 
-# Create a temporary file
-tmpfile=$(mktemp)
+# Remove any existing entries for localhost or facebook.com
+sed -i '/localhost/d' /etc/hosts
+sed -i '/facebook.com/d' /etc/hosts
 
-# Copy all lines from /etc/hosts except localhost and facebook.com
-grep -v -E "^(127\.0\.0\.1|127\.0\.0\.2).*localhost|.*facebook\.com" /etc/hosts > "$tmpfile"
-
-# Add the new entries
-echo "127.0.0.2 localhost" >> "$tmpfile"
-echo "8.8.8.8 facebook.com" >> "$tmpfile"
-
-# Replace /etc/hosts atomically
-sudo mv "$tmpfile" /etc/hosts
+# Add new entries
+echo "127.0.0.2 localhost" >> /etc/hosts
+echo "8.8.8.8 facebook.com" >> /etc/hosts
 
 echo "Hosts file updated successfully."
 
