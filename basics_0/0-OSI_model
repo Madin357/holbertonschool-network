@@ -1,2 +1,33 @@
-The OSI model is a conceptual model that characterizes the communication functions of a telecommunication system without regard to their underlying internal structure and technology
-It is organized from the lowest to the highest level, starting with the Physical layer (Layer 1) and ending with the Application layer (Layer 7)
+1. What is the OSI model?
+
+The correct answer is:
+
+“The OSI model is a conceptual model that characterizes the communication functions of a telecommunication system without regard to their underlying internal structure and technology.”
+
+It is a theoretical framework used to understand and standardize how different networking protocols interact.
+
+It does not depend on specific hardware or software implementations.
+
+2. How is the OSI model organized?
+
+The correct answer is:
+
+“From the lowest to the highest level.”
+
+The OSI model has seven layers, each building on the one below:
+
+Physical – hardware, cables, signals
+
+Data Link – frames, MAC addresses
+
+Network – IP addresses, routing
+
+Transport – TCP/UDP, reliability
+
+Session – sessions, connections
+
+Presentation – data formatting, encryption
+
+Application – user interface, apps
+
+So it goes from Physical (bottom) to Application (top).
