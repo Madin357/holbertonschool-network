@@ -1,12 +1,2 @@
-The OSI model is a conceptual framework that characterizes the communication functions of a telecommunication system without regard to their underlying internal structure and technology. It is used to standardize how different networking protocols interact and does not depend on specific hardware or software implementations.
-
-It is organized from the lowest to the highest level, with seven layers:
-
-1. Physical - hardware, cables, signals
-2. Data Link - frames, MAC addresses
-3. Network - IP addresses, routing
-4. Transport - TCP/UDP, reliability
-5. Session - sessions, connections
-6. Presentation - data formatting, encryption
-7. Application - user interface, apps
-
+The OSI model is a conceptual model that characterizes the communication functions of a telecommunication system without regard to their underlying internal structure and technology
+From the lowest to the highest level
