@@ -1,0 +1,8 @@
+#!/bin/bash
+# Script to display listening TCP and UDP sockets with PID/Program name
+
+echo "Active Internet connections (only servers)"
+ss -tulnp
+
+echo "Active UNIX domain sockets (only servers)"
+ss -xlnp
